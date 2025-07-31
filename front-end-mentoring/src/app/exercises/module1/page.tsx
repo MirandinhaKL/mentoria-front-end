@@ -34,7 +34,7 @@ export default function Module1()
     };
 
     const onChangeConvertedValue = (event: ChangeEvent<HTMLInputElement>) =>{
-        setConvert(event.target.value);
+        setConvert(String(event.target.value));
     }
 
     const onChangeTypeOfInput = (event: ChangeEvent<HTMLInputElement>) => {
@@ -69,8 +69,8 @@ export default function Module1()
     function opertaorComparison(){
         console.clear();
         console.log("*** Exercício 2 ***")
-        const number = 5;
-        const text = "5";
+        //const number = 5;
+        //const text = "5";
         // console.log(number == text);
         // console.log(number === text);
         // console.log(5 == "5");
@@ -128,7 +128,7 @@ export default function Module1()
         return logado ? console.log("Bem-vindo") : console.log("Faça login")
     }
 
-    function convertValue(input: any){
+    function convertValue(input: string){
         console.clear();
         console.log("*** Exercício 8 ***");
         console.log("number => " + Number(input));
@@ -138,7 +138,7 @@ export default function Module1()
         console.log("array => " + Array(input));
     }
 
-    function evaluateTypeOfInput(input: any){
+    function evaluateTypeOfInput(input: string){
         console.clear();
         console.log("*** Exercício 9 ***");
         console.log(`Conteúdo digitado: ${input}`);
@@ -229,9 +229,10 @@ export default function Module1()
         <br></br>
 
         <p>Exercício 7 – Operador ternário</p>
-        <p>Crie uma variável `logado = true`
-        Mostre: `"Bem-vindo"` se logado for `true`, ou `"Faça login"` se `false`.
-        Use operador ternário: `condição ? valor1 : valor2`</p>
+        <p>Crie uma variável &quot;logado = true&quot;
+        Mostre: &quot;Bem-vindo&quot; se logado for &quot;true&quot;, ou &quot;Faça login&quot;
+ se &quot;false&quot;.
+        Use operador ternário: &quot;condição ? valor1 : valor2&quot;</p>
         <p> - Abra o console para ver a resposta.</p>
         <label>
             <input 
@@ -253,12 +254,12 @@ export default function Module1()
             value={convertedValue}
             onChange={(event => onChangeConvertedValue(event))}
         />
-        <button onClick={() => convertValue(convertedValue)}>Clique aqui 8!</button>
+        <button onClick={() => convertValue(String(convertedValue))}>Clique aqui 8!</button>
         <br></br>
 
         <p>**Exercício 9 – Detectar tipo de dado em input**
         Crie um input controlado. Ao digitar algo, mostre abaixo o conteúdo digitado e o tipo dele (`typeof valor`).
-        Dica: `typeof` de inputs sempre retorna `string`, mesmo que o conteúdo pareça número.</p>
+        Dica: &quot typeof &quot de inputs sempre retorna &quot;string&quot;, mesmo que o conteúdo pareça número.</p>
         <p> - Abra o console para ver a resposta.</p>
         <label>Input</label>
         <input 
@@ -270,11 +271,11 @@ export default function Module1()
         <button onClick={() => evaluateTypeOfInput(typeOfInput)}>Clique aqui 9!</button>
         <br></br>
 
-        <p>### **Exercício 10 – Operadores lógicos (`&&`, `||`, `!`)**
+        <p>### **Exercício 10 – Operadores lógicos (&&, ||, !)**
         <p>Crie uma função que recebe dois valores e retorna:</p>   
-        <p>- Se ambos são verdadeiros → `"Ambos verdadeiros"</p>
-        <p>- Se pelo menos um é verdadeiro → `"Algum é verdadeiro"`</p>
-        <p>- Se nenhum for verdadeiro → `"Nenhum é verdadeiro"`</p></p>
+        <p>- Se ambos são verdadeiros = &quot;Ambos verdadeiros&quot;</p>
+        <p>- Se pelo menos um é verdadeiro = &quot;Algum é verdadeiro&quot;</p>
+        <p>- Se nenhum for verdadeiro = &quot;Nenhum é verdadeiro&quot;</p></p>
         <label>Testa se os valores são pares!</label>
         <label>Número 1</label>
         <input
