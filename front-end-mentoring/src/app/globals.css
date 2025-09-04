@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.h1Style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #0a0a0a;
+}
+
+.h1StylePink{
+  color: pink;
+}
+
+.h2Style {
+  margin-top: 20px;
+  font-size: x-large;
+}
+
+.inputStyle{
+  border: solid;
+  margin: 10px;
+}
